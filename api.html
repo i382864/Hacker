@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+
+    <div id="weathercard">
+   <div><h1 id="stad">Weather in </h1></div> 
+   <div id="degree"><h1 id="weer">
+
+   </h1></div> 
+</div>
+</head>
+<body>
+
+    <script>
+       
+       let weather = '';
+       let temperature = '';
+
+        const api_url = 'https://api.openweathermap.org/data/2.5/weather?q=Eindhoven&units=metric&APPID=4c16211d7b003d287175f78a0cecdee9'
+        async function getData(){
+           await fetch(api_url)
+         .then(response => response.json())
+         .then(data =>{ 
+             console.log(data);
+             console.log(data.name);
+             weather = "Eindhoven";
+             temperature = data.main.temp;
+             });
+
+
+    
+            document.getElementById("stad").innerHTML += weather; 
+            document.getElementById("weer").innerHTML += Math.round(temperature) + " °C";
+
+             
+            
+        }
+        getData();
+
+    </script>
+    
+  
+
+</body>
+</html>

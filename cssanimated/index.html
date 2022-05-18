@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylings.css">
+    <title>CSS Animations</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Sarvin</a>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="bird1.png" id="bird1">
+        <img src="bird2.png" id="bird2">
+        <img src="boatt.png" id="boat1">
+        <img src="forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="sea.png" id="sea">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>porttitor neque vehicula sit amet. Ut lorem elit, tristique eget maximus vel, pellentesque in dui. Integer vel lectus eu sapien varius convallis id et erat. Fusce convallis id libero id gravida. Vestibulum ultrices nibh id sapien interdum viverra. Maecenas vel risus condimentum, facilisis lorem in, consectetur felis. Integer consectetur eleifend venenatis. Suspendisse venenatis risus felis, eget convallis purus bibendum eget. Nunc dignissim justo ut tellus molestie sagittis. Ut sodales a odio eget congue. In vulputate, diam sit amet ullamcorper consequat, mi justo lacinia arcu, eget consequat tellus magna in neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer consequat risus non nibh vehicula aliquam. Mauris ac ante non dui maximus varius.
+
+            In egestas nulla ante, ac pulvinar risus tincidunt eu. Donec aliquet felis id erat viverra, quis interdum velit suscipit. Quisque velit risus, laoreet et elementum vel, consectetur non ex. Maecenas euismod lacus ut ex tristique ultricies. Phasellus ut vestibulum velit. Vivamus nulla purus, aliquet ut pharetra et, ullamcorper non nunc. Praesent volutpat nisl at purus auctor eleifend. Phasellus porttitor dignissim ligula, in tempus quam molestie ut. In tincidunt nunc eros, non fringilla mi dapibus sit amet. Morbi viverra purus ac volutpat auctor. Nunc efficitur ac massa non auctor.
+            
+            Aliquam vitae purus feugiat ex ornare tempus. In placerat, velit a blandit porta, nisi orci ultricies ipsum, eget fringilla est lorem a ligula. Phasellus tempor turpis ullamcorper nibh pellentesque dignissim ultrices non justo. Nam sit amet turpis eget lorem ultrices mollis sed vel arcu. Aliquam iaculis velit id nunc semper, eget mollis tortor dignissim. Maecenas ac auctor dolor. Nam ac magna justo. Nunc eu ex ligula. Nam ac nisl massa. Nulla accumsan, est et semper scelerisque, lectus lorem ornare leo, non posuere purus risus sit amet lorem. Praesent elit libero, tempus a tortor sit amet, vulputate ultrices tellus. Morbi eget tellus risus. Pellentesque in sem ut tortor vulputate mollis.
+            
+            Proin eros massa, feugiat nec tortor ac, blandit faucibus dui. Aliquam eu tempor orci, ut scelerisque sem. Donec a nunc justo. Donec laoreet cursus gravida. Pellentesque varius nulla vel bibendum semper. Vivamus vehicula ut nunc scelerisque rhoncus. Curabitur efficitur egestas ullamcorper. Curabitur faucibus magna ac risus molestie, vel pellentesque ipsum vehicula. Integer sagittis vulputate ante eget sollicitudin. Etiam in vestibulum ipsum. Duis non mauris placerat, pretium mauris eget, lobortis nunc. Mauris finibus, magna a efficitur iaculis, tellus lacus posuere nisl, a semper odio elit sit amet magna. Nulla imperdiet bibendum lectus, ut porta orci sagittis vel. Proin quis aliquam tortor. Quisque tincidunt tortor dictum, porta erat tempus, condimentum magna.
+            
+            Duis vitae placerat orci. Aliquam eu tempus mi, at feugiat ipsum. Curabitur dapibus nibh vitae sagittis rhoncus. Vestibulum vitae velit in nibh egestas varius. Vestibulum commodo, sem at ullamcorper dictum, turpis lacus efficitur arcu, sagittis pellentesque diam sem in arcu. Phasellus faucibus orci a lectus imperdiet convallis. Suspendisse dapibus porttitor interdum. Curabitur ut tortor nisl. Donec rhoncus lacus eget justo blandit, at convallis enim rhoncus. Aliquam eu dignissim eros. Aenean tempus semper libero, consequat rutrum tortor vulputate ut. Maecenas sit amet tortor massa. Donec porta nisi id justo molestie ullamcorper. Suspendisse semper libero vitae ante eleifend molestie. Nulla eu commodo lorem.</p>
+    </div>
+
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let forest = document.getElementById('forest');
+        let sea = document.getElementById('sea');
+        let header = document.getElementById('header');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -2 + 'px';
+ 
+        })
+    </script>
+</body>
+</html>

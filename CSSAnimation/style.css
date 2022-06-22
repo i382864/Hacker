@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+#balloon1{
+    animation: balloon 5s ease;
+}
+#balloon2{
+    animation: balloon2 5s ease;
+}
+#balloon3{
+    animation: balloon3 5s ease;
+}
+/*keyframes*/
+@keyframes balloon{
+    from{
+        transform: translatex(0px) translatey(0px)
+    }
+    to{
+        transform: translatex(75px) translateY(-300px);
+    }
+}
+@keyframes balloon2{
+    from{
+        transform: translatex(0px) translatey(0px)
+    }
+    to{
+        transform: translatex(200px) translateY(-300px);
+    }
+}
+@keyframes balloon3{
+    from{
+        transform: translatex(0px) translatey(0px)
+    }
+    to{
+        transform: translatex(400px) translateY(-300px);
+    }
+}

@@ -6,14 +6,39 @@
 body{
     text-align: center;
 }
+
+.parent{
+    position: relative;
+  top: 0;
+  left: 0;
+}
+
+#image1{
+    position: relative;
+    top: 0;
+  left: 0;
+  height: 700px;
+    width: auto;
+}
+
+#image2{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  margin-top: -31%;
+  margin-left: -50%;
+    stroke: transparent;
+    stroke-width: 0px;
+    height: 1000px;
+}
 #balloon1{
-    animation: balloon 5s ease;
+    animation: balloon 10s ease;
 }
 #balloon2{
-    animation: balloon2 5s ease;
+    animation: balloon2 10s ease;
 }
 #balloon3{
-    animation: balloon3 5s ease;
+    animation: balloon3 10s ease;
 }
 /*keyframes*/
 @keyframes balloon{
@@ -21,7 +46,7 @@ body{
         transform: translatex(0px) translatey(0px)
     }
     to{
-        transform: translatex(75px) translateY(-300px);
+        transform: translatex(75px) translateY(-1500px);
     }
 }
 @keyframes balloon2{
@@ -29,7 +54,7 @@ body{
         transform: translatex(0px) translatey(0px)
     }
     to{
-        transform: translatex(200px) translateY(-300px);
+        transform: translatex(200px) translateY(-1500px);
     }
 }
 @keyframes balloon3{
@@ -37,6 +62,6 @@ body{
         transform: translatex(0px) translatey(0px)
     }
     to{
-        transform: translatex(400px) translateY(-300px);
+        transform: translatex(400px) translateY(-1500px);
     }
 }
